@@ -4,372 +4,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050505">
-  <meta name="description" content="A-F-A-W Entertainment – Your Entertainment World. Discover movies, series, anime, live TV and more.">
-
-  <title>A-F-A-W Entertainment | Your Entertainment World</title>
-
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="AFAW Entertainment - Your Entertainment World">
+  <title>AFAW Entertainment | Your Entertainment World</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- PREMIUM HEADER -->
-  <header class="header">
+  <div class="app-shell">
 
-    <a href="#" class="brand">
-      <div class="crown">♛</div>
-      <div class="brand-name">
-        <span class="brand-red">A</span><span class="brand-white">-F-A-W</span>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <a href="#home" class="brand">
+        <span class="crown">♛</span>
+        <span class="brand-name"><b>A</b>-F-A-W</span>
+        <small>ENTERTAINMENT</small>
+      </a>
+
+      <div class="side-label">MENU</div>
+      <nav class="side-nav">
+        <a href="#home" class="active">⌂ <span>Home</span></a>
+        <a href="#movies">▣ <span>Movies</span></a>
+        <a href="#series">▤ <span>Series</span></a>
+        <a href="#live">◉ <span>Live TV</span></a>
+        <a href="#anime">✦ <span>Anime</span></a>
+        <a href="#kids">♡ <span>Kids & Cartoons</span></a>
+        <a href="#dramas">▶ <span>K-Dramas</span></a>
+        <a href="#punjabi">♫ <span>Punjabi</span></a>
+      </nav>
+
+      <div class="side-label">PERSONAL</div>
+      <nav class="side-nav">
+        <a href="#my-list">♡ <span>My List</span></a>
+        <a href="#continue">◷ <span>Continue Watching</span></a>
+        <a href="#premium">♛ <span>Premium Plans</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="premium-mini">
+          <span>♛ PREMIUM</span>
+          <p>Unlock your entertainment world.</p>
+          <a href="#premium">Explore Plans →</a>
+        </div>
+        <a href="#settings">⚙ <span>Settings</span></a>
       </div>
-      <p>Your Entertainment World</p>
-    </a>
+    </aside>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="home">
 
-    <nav class="main-nav" id="mainNav">
-      <a href="#home" class="nav-link active">⌂ Home</a>
-      <a href="#movies" class="nav-link">▣ Movies</a>
-      <a href="#series" class="nav-link">▤ Series</a>
-      <a href="#live" class="nav-link">◉ Live TV</a>
-      <a href="#cartoons" class="nav-link">✿ Cartoons</a>
-      <a href="#anime" class="nav-link">✦ Anime</a>
-      <a href="#kids" class="nav-link">★ Kids</a>
-      <a href="#dramas" class="nav-link">♡ K-Dramas</a>
-    </nav>
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
 
-    <div class="header-actions">
-      <div class="search-box">
-        <span>⌕</span>
-        <input id="searchInput" type="search" placeholder="Search movies, series...">
-      </div>
-      <button class="profile-button" id="profileButton" aria-label="Account">👤</button>
-    </div>
-
-  </header>
-
-
-  <main id="home">
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-        <span class="hero-tag">♛ AFAW EXCLUSIVE EXPERIENCE</span>
-
-        <p class="hero-small">YOUR NEXT ENTERTAINMENT DESTINATION</p>
-
-        <h1>YOUR WORLD.<br>
-          <span>YOUR ENTERTAINMENT.</span>
-        </h1>
-
-        <p class="hero-description">
-          Discover an extraordinary world of movies, series,
-          live entertainment and unforgettable stories.
-        </p>
-
-        <div class="hero-meta">
-          <span>4K EXPERIENCE</span>
-          <span>•</span>
-          <span>PREMIUM COLLECTION</span>
-          <span>•</span>
-          <span>ALL IN ONE PLACE</span>
+        <div class="breadcrumb">
+          <span>YOUR ENTERTAINMENT WORLD</span>
         </div>
 
-        <div class="hero-buttons">
-          <button class="btn btn-primary" id="watchButton">▶ Watch Now</button>
-          <button class="btn btn-secondary" id="infoButton">More Info ⓘ</button>
+        <div class="top-actions">
+          <label class="search-box">
+            <span>⌕</span>
+            <input type="search" id="searchInput" placeholder="Search movies, series...">
+          </label>
+          <button class="icon-btn" id="notificationButton" aria-label="Notifications">♧</button>
+          <button class="profile-btn" id="profileButton" aria-label="My account">
+            <span>U</span>
+          </button>
         </div>
-      </div>
+      </header>
 
-      <div class="hero-bottom">
-        <span>FEATURED ENTERTAINMENT</span>
-        <div class="hero-dots">
-          <i class="active"></i><i></i><i></i><i></i><i></i>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- CATEGORY SECTION -->
-    <section class="section categories-section">
-
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">EXPLORE YOUR WORLD</span>
-          <h2>Browse Categories</h2>
-        </div>
-        <span class="section-count">08 COLLECTIONS</span>
-      </div>
-
-      <div class="category-grid">
-
-        <a href="#movies" class="category-card category-movies">
-          <span class="category-icon">🎬</span>
-          <h3>Movies</h3>
-          <p>Explore Films</p>
-        </a>
-
-        <a href="#series" class="category-card category-series">
-          <span class="category-icon">📺</span>
-          <h3>Series</h3>
-          <p>Watch Stories</p>
-        </a>
-
-        <a href="#live" class="category-card category-live">
-          <span class="category-icon">🔴</span>
-          <h3>Live TV</h3>
-          <p>Live Channels</p>
-        </a>
-
-        <a href="#cartoons" class="category-card category-cartoons">
-          <span class="category-icon">🎨</span>
-          <h3>Cartoons</h3>
-          <p>Fun & Adventure</p>
-        </a>
-
-        <a href="#anime" class="category-card category-anime">
-          <span class="category-icon">⚡</span>
-          <h3>Anime</h3>
-          <p>Anime World</p>
-        </a>
-
-        <a href="#kids" class="category-card category-kids">
-          <span class="category-icon">🧸</span>
-          <h3>Kids</h3>
-          <p>Kids Collection</p>
-        </a>
-
-        <a href="#dramas" class="category-card category-drama">
-          <span class="category-icon">🎭</span>
-          <h3>K-Dramas</h3>
-          <p>Drama Collection</p>
-        </a>
-
-        <a href="#punjabi" class="category-card category-punjabi">
-          <span class="category-icon">⭐</span>
-          <h3>Punjabi</h3>
-          <p>Punjabi Entertainment</p>
-        </a>
-
-      </div>
-    </section>
-
-
-    <!-- TRENDING MOVIES -->
-    <section class="section content-section" id="movies">
-
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">HANDPICKED FOR YOU</span>
-          <h2>Trending Movies</h2>
-        </div>
-        <a href="#movies" class="view-all">View All →</a>
-      </div>
-
-      <div class="movie-row">
-
-        <article class="movie-card" data-title="Featured Movie One" data-type="Movie" data-symbol="🎬">
-          <div class="poster poster-one"><span>01</span></div>
-          <div class="movie-info">
-            <span class="movie-quality">FEATURED</span>
-            <h3>Featured Movie</h3>
-            <p>Movie Collection</p>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="exclusive-tag">
+            <span></span> AFAW ORIGINAL EXPERIENCE
           </div>
-        </article>
 
-        <article class="movie-card" data-title="Featured Movie Two" data-type="Movie" data-symbol="🎥">
-          <div class="poster poster-two"><span>02</span></div>
-          <div class="movie-info">
-            <span class="movie-quality">NEW</span>
-            <h3>New Release</h3>
-            <p>Movie Collection</p>
+          <p class="hero-kicker">THE NEXT LEVEL OF ENTERTAINMENT</p>
+          <h1>YOUR WORLD.<br><em>YOUR STORIES.</em></h1>
+
+          <p class="hero-description">
+            Discover a world of cinematic experiences, exclusive stories
+            and unforgettable entertainment — all in one place.
+          </p>
+
+          <div class="hero-meta">
+            <span>✦ FEATURED</span>
+            <span>4K EXPERIENCE</span>
+            <span>PREMIUM COLLECTION</span>
           </div>
-        </article>
 
-        <article class="movie-card" data-title="Featured Movie Three" data-type="Movie" data-symbol="🎞️">
-          <div class="poster poster-three"><span>03</span></div>
-          <div class="movie-info">
-            <span class="movie-quality">4K</span>
-            <h3>Action Collection</h3>
-            <p>Movie Collection</p>
+          <div class="hero-buttons">
+            <a href="#movies" class="btn-primary">▶ EXPLORE NOW</a>
+            <a href="#premium" class="btn-secondary">♛ GO PREMIUM</a>
           </div>
-        </article>
-
-        <article class="movie-card" data-title="Featured Movie Four" data-type="Movie" data-symbol="🍿">
-          <div class="poster poster-four"><span>04</span></div>
-          <div class="movie-info">
-            <span class="movie-quality">POPULAR</span>
-            <h3>Popular Movie</h3>
-            <p>Movie Collection</p>
-          </div>
-        </article>
-
-        <article class="movie-card" data-title="Featured Movie Five" data-type="Movie" data-symbol="⭐">
-          <div class="poster poster-five"><span>05</span></div>
-          <div class="movie-info">
-            <span class="movie-quality">TOP PICK</span>
-            <h3>Top Selection</h3>
-            <p>Movie Collection</p>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- SERIES -->
-    <section class="section content-section" id="series">
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">BINGE YOUR FAVORITES</span>
-          <h2>Popular Series</h2>
         </div>
-        <a href="#series" class="view-all">View All →</a>
-      </div>
 
-      <div class="movie-row">
-        <article class="movie-card" data-title="Series One" data-type="Series" data-symbol="📺">
-          <div class="poster poster-six"><span>01</span></div>
-          <div class="movie-info"><h3>Series Collection</h3><p>Drama & Stories</p></div>
-        </article>
-
-        <article class="movie-card" data-title="Series Two" data-type="Series" data-symbol="🎭">
-          <div class="poster poster-seven"><span>02</span></div>
-          <div class="movie-info"><h3>Featured Series</h3><p>Popular Collection</p></div>
-        </article>
-
-        <article class="movie-card" data-title="Series Three" data-type="Series" data-symbol="✨">
-          <div class="poster poster-eight"><span>03</span></div>
-          <div class="movie-info"><h3>New Series</h3><p>New Collection</p></div>
-        </article>
-      </div>
-    </section>
-
-
-    <!-- LIVE TV -->
-    <section class="section live-banner" id="live">
-      <div>
-        <span class="live-indicator">● LIVE EXPERIENCE</span>
-        <h2>Entertainment Never Stops.</h2>
-        <p>Discover live entertainment in one place.</p>
-      </div>
-      <button class="btn btn-primary" id="liveButton">Explore Live TV →</button>
-    </section>
-
-
-    <!-- KIDS -->
-    <section class="section content-section" id="kids">
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">FUN FOR EVERYONE</span>
-          <h2>Kids & Cartoons</h2>
+        <div class="hero-art">
+          <div class="art-ring"></div>
+          <div class="art-crown">♛</div>
+          <div class="art-title">AFAW</div>
+          <div class="art-subtitle">CINEMATIC UNIVERSE</div>
         </div>
-        <a href="#kids" class="view-all">View All →</a>
-      </div>
 
-      <div class="movie-row kids-row">
-        <article class="movie-card" data-title="Kids One" data-type="Kids" data-symbol="🧸">
-          <div class="poster poster-nine"><span>01</span></div>
-          <div class="movie-info"><h3>Kids Collection</h3><p>Family Friendly</p></div>
-        </article>
-        <article class="movie-card" data-title="Cartoon Two" data-type="Cartoons" data-symbol="🎨">
-          <div class="poster poster-ten"><span>02</span></div>
-          <div class="movie-info"><h3>Cartoon World</h3><p>Animation</p></div>
-        </article>
-        <article class="movie-card" data-title="Anime Three" data-type="Anime" data-symbol="⚡">
-          <div class="poster poster-eleven"><span>03</span></div>
-          <div class="movie-info"><h3>Anime Collection</h3><p>Adventure</p></div>
-        </article>
-      </div>
-    </section>
-
-
-    <!-- DRAMAS -->
-    <section class="section content-section" id="dramas">
-      <div class="section-heading">
-        <div>
-          <span class="section-kicker">GLOBAL ENTERTAINMENT</span>
-          <h2>K-Dramas & More</h2>
+        <div class="hero-bottom">
+          <span>01 — THE AFAW EXPERIENCE</span>
+          <div class="hero-dots">
+            <i class="selected"></i><i></i><i></i>
+          </div>
         </div>
-        <a href="#dramas" class="view-all">View All →</a>
-      </div>
+      </section>
 
-      <div class="movie-row drama-row">
-        <article class="movie-card" data-title="K Drama One" data-type="K-Drama" data-symbol="🌸">
-          <div class="poster poster-twelve"><span>01</span></div>
-          <div class="movie-info"><h3>K-Drama Collection</h3><p>Romance & Drama</p></div>
-        </article>
-        <article class="movie-card" data-title="Punjabi Two" data-type="Punjabi" data-symbol="⭐">
-          <div class="poster poster-thirteen"><span>02</span></div>
-          <div class="movie-info"><h3>Punjabi Collection</h3><p>Punjabi Entertainment</p></div>
-        </article>
-      </div>
-    </section>
+      <!-- QUICK CATEGORIES -->
+      <section class="section-block">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">DISCOVER MORE</span>
+            <h2>Explore Categories</h2>
+          </div>
+          <span class="section-note">YOUR WORLD, YOUR CHOICE</span>
+        </div>
 
+        <div class="category-grid">
+          <a href="#movies" class="category-card"><span>▣</span><b>Movies</b></a>
+          <a href="#series" class="category-card"><span>▤</span><b>Series</b></a>
+          <a href="#live" class="category-card"><span>◉</span><b>Live TV</b></a>
+          <a href="#anime" class="category-card"><span>✦</span><b>Anime</b></a>
+          <a href="#kids" class="category-card"><span>♡</span><b>Kids</b></a>
+          <a href="#dramas" class="category-card"><span>▶</span><b>K-Dramas</b></a>
+        </div>
+      </section>
 
-    <!-- MY LIST -->
-    <section class="section my-list-banner" id="my-list">
-      <div class="my-list-icon">♡</div>
-      <div>
-        <h2>Your Personal Collection</h2>
-        <p>Keep your favorite entertainment together.</p>
-      </div>
-      <button class="btn btn-secondary" id="myListButton">My List →</button>
-    </section>
+      <!-- TRENDING -->
+      <section class="section-block" id="movies">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">WHAT'S HOT RIGHT NOW</span>
+            <h2>Trending Now</h2>
+          </div>
+          <a href="#movies" class="view-all">View All →</a>
+        </div>
 
-  </main>
+        <div class="poster-grid">
+          <article class="poster-card poster-one">
+            <span class="poster-number">01</span>
+            <div class="poster-info"><small>FEATURED COLLECTION</small><h3>THE LAST<br>KINGDOM</h3><span>Action • Drama</span></div>
+          </article>
+          <article class="poster-card poster-two">
+            <span class="poster-number">02</span>
+            <div class="poster-info"><small>NOW SHOWING</small><h3>DARK<br>HORIZON</h3><span>Thriller • Mystery</span></div>
+          </article>
+          <article class="poster-card poster-three">
+            <span class="poster-number">03</span>
+            <div class="poster-info"><small>EDITOR'S PICK</small><h3>RED<br>EMPIRE</h3><span>Action • Crime</span></div>
+          </article>
+          <article class="poster-card poster-four">
+            <span class="poster-number">04</span>
+            <div class="poster-info"><small>POPULAR</small><h3>BEYOND<br>THE STARS</h3><span>Sci-Fi • Adventure</span></div>
+          </article>
+        </div>
+      </section>
 
+      <!-- CONTINUE WATCHING -->
+      <section class="section-block" id="continue">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">PICK UP WHERE YOU LEFT</span>
+            <h2>Continue Watching</h2>
+          </div>
+          <a href="#my-list" class="view-all">My List →</a>
+        </div>
+        <div class="watching-grid">
+          <div class="watching-card">
+            <div class="watching-art watch-art-one">AFAW <span>01</span></div>
+            <div class="watching-details"><b>Featured Story</b><small>Episode 01 • Demo preview</small><div class="progress"><i style="width:65%"></i></div></div>
+          </div>
+          <div class="watching-card">
+            <div class="watching-art watch-art-two">SERIES <span>02</span></div>
+            <div class="watching-details"><b>New Adventures</b><small>Episode 03 • Demo preview</small><div class="progress"><i style="width:35%"></i></div></div>
+          </div>
+        </div>
+      </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-brand">
-      <span class="brand-red">A</span><span class="brand-white">-F-A-W</span>
-    </div>
-    <p>Your Entertainment World</p>
-    <p class="footer-copy">© 2026 A-F-A-W Entertainment. All Rights Reserved.</p>
-  </footer>
+      <!-- SERIES -->
+      <section class="section-block" id="series">
+        <div class="section-heading">
+          <div><span class="eyebrow">BINGE-WORTHY STORIES</span><h2>Popular Series</h2></div>
+          <a href="#series" class="view-all">View All →</a>
+        </div>
+        <div class="poster-grid compact-grid">
+          <article class="poster-card poster-five"><div class="poster-info"><h3>THE<br>UNKNOWN</h3><span>Mystery • Series</span></div></article>
+          <article class="poster-card poster-six"><div class="poster-info"><h3>FINAL<br>DESTINY</h3><span>Drama • Series</span></div></article>
+          <article class="poster-card poster-seven"><div class="poster-info"><h3>THE<br>SHADOW</h3><span>Thriller • Series</span></div></article>
+          <article class="poster-card poster-eight"><div class="poster-info"><h3>NEW<br>WORLD</h3><span>Adventure • Series</span></div></article>
+        </div>
+      </section>
 
+      <!-- LIVE TV -->
+      <section class="section-block" id="live">
+        <div class="live-banner">
+          <div><span class="live-tag">● LIVE EXPERIENCE</span><h2>Live TV, All in One Place</h2><p>Explore your authorized live entertainment channels.</p></div>
+          <a href="#premium" class="btn-primary">EXPLORE LIVE TV →</a>
+        </div>
+      </section>
 
-  <!-- MOBILE NAVIGATION -->
-  <nav class="mobile-nav">
-    <a href="#home"><span>⌂</span><small>Home</small></a>
-    <a href="#movies"><span>▣</span><small>Movies</small></a>
-    <a href="#series"><span>▤</span><small>Series</small></a>
-    <a href="#home" class="mobile-brand"><span>♛</span><small>AFAW</small></a>
-    <a href="#live"><span>◉</span><small>Live TV</small></a>
-    <a href="#my-list"><span>♡</span><small>My List</small></a>
-  </nav>
+      <!-- MORE CATEGORIES -->
+      <section class="section-block" id="anime">
+        <div class="section-heading"><div><span class="eyebrow">MORE TO EXPLORE</span><h2>Entertainment Universe</h2></div></div>
+        <div class="category-grid extended-grid">
+          <a href="#anime" class="category-card"><span>✦</span><b>Anime</b></a>
+          <a href="#kids" class="category-card"><span>♡</span><b>Cartoons</b></a>
+          <a href="#kids" class="category-card"><span>★</span><b>Kids World</b></a>
+          <a href="#dramas" class="category-card"><span>▶</span><b>K-Dramas</b></a>
+          <a href="#punjabi" class="category-card"><span>♫</span><b>Punjabi</b></a>
+          <a href="#movies" class="category-card"><span>▣</span><b>Classics</b></a>
+        </div>
+      </section>
 
+      <!-- PREMIUM -->
+      <section class="section-block premium-section" id="premium">
+        <div class="section-heading">
+          <div><span class="eyebrow">UNLOCK THE EXPERIENCE</span><h2>AFAW Premium</h2></div>
+          <span class="premium-crown">♛</span>
+        </div>
+        <p class="premium-intro">Choose your membership and enjoy your entertainment world.</p>
 
-  <!-- INFORMATION MODAL -->
-  <div class="modal" id="movieModal">
-    <div class="modal-box">
+        <div class="plans-grid">
+          <article class="plan-card">
+            <span class="plan-label">FLEXIBLE PLAN</span>
+            <h3>Monthly</h3>
+            <div class="plan-price">500 <small>/ 30 Days</small></div>
+            <ul><li>Premium Membership</li><li>Access to available premium content</li><li>Account support</li></ul>
+            <button class="plan-button" data-plan="Monthly">Choose Monthly</button>
+          </article>
 
-      <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+          <article class="plan-card featured-plan">
+            <span class="plan-label">BEST VALUE</span>
+            <h3>Yearly</h3>
+            <div class="plan-price">5,000 <small>/ 365 Days</small></div>
+            <ul><li>Premium Membership</li><li>Access to available premium content</li><li>Account support</li></ul>
+            <button class="plan-button" data-plan="Yearly">Choose Yearly</button>
+          </article>
+        </div>
+        <p class="discount-note">Discount के लिए Owner से संपर्क करें।</p>
+      </section>
 
-      <div class="modal-symbol" id="modalSymbol">♛</div>
+      <!-- MY LIST -->
+      <section class="section-block" id="my-list">
+        <div class="section-heading"><div><span class="eyebrow">YOUR PERSONAL COLLECTION</span><h2>My List</h2></div></div>
+        <div class="empty-state"><span>♡</span><h3>Your collection starts here</h3><p>Save your favourite entertainment and find it here.</p></div>
+      </section>
 
-      <span class="modal-label">A-F-A-W ENTERTAINMENT</span>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-brand">♛ <b>A</b>-F-A-W <small>ENTERTAINMENT</small></div>
+        <p>Your Entertainment World</p>
+        <div class="footer-links"><a href="#home">Home</a><a href="#premium">Premium</a><a href="#settings">Settings</a></div>
+        <small>© 2026 AFAW Entertainment. All Rights Reserved.</small>
+      </footer>
 
-      <h2 id="modalTitle">Welcome</h2>
+    </main>
+  </div>
 
-      <p id="modalType">Your Entertainment World</p>
-
-      <p class="modal-description">
-        Discover your next entertainment experience.
-      </p>
-
-      <button class="btn btn-primary" id="modalWatch">▶ Watch Now</button>
-
+  <!-- PROFILE MENU -->
+  <div class="overlay" id="profileOverlay">
+    <div class="account-panel">
+      <button class="close-btn" id="closeProfile">×</button>
+      <div class="account-avatar">U</div>
+      <span class="eyebrow">YOUR AFAW ACCOUNT</span>
+      <h2>Welcome to AFAW</h2>
+      <p>Sign in or create your account to continue.</p>
+      <button class="account-action" id="loginButton">Sign In</button>
+      <button class="account-action secondary-action" id="signupButton">Create Account</button>
+      <a href="#settings" id="settingsLink">⚙ Account Settings</a>
     </div>
   </div>
 
+  <!-- AUTH MODAL -->
+  <div class="overlay" id="authOverlay">
+    <div class="auth-panel">
+      <button class="close-btn" id="closeAuth">×</button>
+      <span class="crown">♛</span>
+      <h2 id="authTitle">Welcome Back</h2>
+      <p id="authDescription">Sign in to your AFAW account.</p>
+      <form id="authForm">
+        <label>Email Address</label>
+        <input type="email" id="authEmail" placeholder="Enter your email" required>
+        <label>Password</label>
+        <input type="password" id="authPassword" placeholder="Enter password" required minlength="8">
+        <button type="submit" class="account-action" id="authSubmit">Sign In</button>
+      </form>
+      <p class="auth-note">Account security and authentication will be connected to the secure backend.</p>
+    </div>
+  </div>
+
+  <!-- GENERAL MODAL -->
+  <div class="overlay" id="generalOverlay">
+    <div class="auth-panel">
+      <button class="close-btn" id="closeGeneral">×</button>
+      <span class="crown">♛</span>
+      <h2 id="generalTitle">AFAW Entertainment</h2>
+      <p id="generalMessage">Welcome to your entertainment world.</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
-
 </body>
 </html>
