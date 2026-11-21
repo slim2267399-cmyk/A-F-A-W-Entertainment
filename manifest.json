@@ -1,0 +1,21 @@
+
+{
+  "id": "/",
+  "name": "AFAW Entertainment",
+  "short_name": "AFAW",
+  "description": "Your Entertainment World",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080808",
+  "theme_color": "#b50920",
+  "icons": [
+    {
+      "src": "https://placehold.co/512x512/080808/b50920.png?text=AFAW",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
