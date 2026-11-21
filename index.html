@@ -4,208 +4,372 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AFAW Entertainment</title>
-  <meta name="description" content="AFAW Entertainment - Your Entertainment World">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="A-F-A-W Entertainment – Your Entertainment World. Discover movies, series, anime, live TV and more.">
+
+  <title>A-F-A-W Entertainment | Your Entertainment World</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <aside class="sidebar">
-    <div class="logo">
-      <div class="crown">♛</div>
-      <h1>AFAW</h1>
-      <p>ENTERTAINMENT</p>
-    </div>
+  <!-- PREMIUM HEADER -->
+  <header class="header">
 
-    <div class="menu-label">MAIN MENU</div>
-    <nav class="side-menu">
-      <a class="nav-link active" href="#home">⌂ <span>Home</span></a>
-      <a class="nav-link" href="#movies">▣ <span>Movies</span></a>
-      <a class="nav-link" href="#series">▤ <span>Series</span></a>
-      <a class="nav-link" href="#live">▣ <span>Live TV</span></a>
-      <a class="nav-link" href="#cartoons">☻ <span>Cartoons</span></a>
-      <a class="nav-link" href="#anime">✦ <span>Anime</span></a>
-      <a class="nav-link" href="#kids">♧ <span>Kids</span></a>
-      <a class="nav-link" href="#kdramas">♡ <span>K-Dramas</span></a>
-      <a class="nav-link" href="#punjabi">♫ <span>Punjabi</span></a>
-      <a class="nav-link" href="#settings">⚙ <span>Settings</span></a>
+    <a href="#" class="brand">
+      <div class="crown">♛</div>
+      <div class="brand-name">
+        <span class="brand-red">A</span><span class="brand-white">-F-A-W</span>
+      </div>
+      <p>Your Entertainment World</p>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="nav-link active">⌂ Home</a>
+      <a href="#movies" class="nav-link">▣ Movies</a>
+      <a href="#series" class="nav-link">▤ Series</a>
+      <a href="#live" class="nav-link">◉ Live TV</a>
+      <a href="#cartoons" class="nav-link">✿ Cartoons</a>
+      <a href="#anime" class="nav-link">✦ Anime</a>
+      <a href="#kids" class="nav-link">★ Kids</a>
+      <a href="#dramas" class="nav-link">♡ K-Dramas</a>
     </nav>
 
-    <div class="sidebar-brand">
-      <div class="crown">♛</div>
-      <h2>AFAW</h2>
-      <p>Your Entertainment<br>World</p>
-    </div>
-  </aside>
-
-  <main class="main" id="home">
-    <header class="topbar">
-      <button class="mobile-menu" id="menuToggle" aria-label="Open menu">☰</button>
+    <div class="header-actions">
       <div class="search-box">
         <span>⌕</span>
-        <input id="searchInput" type="search"
-          placeholder="Search movies, series...">
+        <input id="searchInput" type="search" placeholder="Search movies, series...">
       </div>
-      <button class="notification" aria-label="Notifications">♟</button>
-      <button class="avatar" id="profileButton">A</button>
-    </header>
-
-    <div class="page-content">
-      <section class="hero">
-        <div class="hero-content">
-          <span class="featured">✦ FEATURED</span>
-          <h2>YOUR NEXT<br><span>ADVENTURE</span></h2>
-          <h3>Your Entertainment World begins here.</h3>
-          <p>Discover amazing movies, exciting series and endless entertainment in one premium destination.</p>
-          <div class="hero-buttons">
-            <button class="btn btn-red" id="watchButton">▶ Watch Now</button>
-            <button class="btn btn-outline" id="infoButton">ⓘ More Info</button>
-          </div>
-        </div>
-        <div class="hero-dots"><i></i><i></i><i></i></div>
-      </section>
-
-      <section class="content-section" id="movies">
-        <div class="section-heading">
-          <h2>New Releases</h2>
-          <a href="#movies">View All →</a>
-        </div>
-        <div class="movie-row">
-          <article class="movie-card" data-title="Desert Kingdom" data-type="Adventure Movie" data-symbol="🏜️">
-            <div class="poster-symbol">🏜️</div><span class="quality">FEATURED</span>
-            <div class="movie-info"><h3>Desert Kingdom</h3><p>Adventure · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Fury Road" data-type="Action Movie" data-symbol="🔥">
-            <div class="poster-symbol">🔥</div><span class="quality">HD</span>
-            <div class="movie-info"><h3>Fury Road</h3><p>Action · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Dark Knight" data-type="Action Movie" data-symbol="🦇">
-            <div class="poster-symbol">🦇</div><span class="quality">HD</span>
-            <div class="movie-info"><h3>Dark Knight</h3><p>Action · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Fast Mission" data-type="Thriller Movie" data-symbol="🏎️">
-            <div class="poster-symbol">🏎️</div><span class="quality">HD</span>
-            <div class="movie-info"><h3>Fast Mission</h3><p>Thriller · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Galaxy Heroes" data-type="Sci-Fi Movie" data-symbol="🚀">
-            <div class="poster-symbol">🚀</div><span class="quality">4K</span>
-            <div class="movie-info"><h3>Galaxy Heroes</h3><p>Sci-Fi · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Super World" data-type="Family Movie" data-symbol="⭐">
-            <div class="poster-symbol">⭐</div><span class="quality">HD</span>
-            <div class="movie-info"><h3>Super World</h3><p>Family · Movie</p></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section" id="series">
-        <div class="section-heading">
-          <h2>Trending Series</h2><a href="#series">View All →</a>
-        </div>
-        <div class="movie-row">
-          <article class="movie-card" data-title="Last Kingdom" data-type="Drama Series" data-symbol="⚔️">
-            <div class="poster-symbol">⚔️</div><div class="movie-info"><h3>Last Kingdom</h3><p>Drama · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="Shadow Line" data-type="Mystery Series" data-symbol="🌑">
-            <div class="poster-symbol">🌑</div><div class="movie-info"><h3>Shadow Line</h3><p>Mystery · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="Lost Planet" data-type="Sci-Fi Series" data-symbol="🪐">
-            <div class="poster-symbol">🪐</div><div class="movie-info"><h3>Lost Planet</h3><p>Sci-Fi · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="The Mission" data-type="Action Series" data-symbol="🎯">
-            <div class="poster-symbol">🎯</div><div class="movie-info"><h3>The Mission</h3><p>Action · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="Secret World" data-type="Thriller Series" data-symbol="🔮">
-            <div class="poster-symbol">🔮</div><div class="movie-info"><h3>Secret World</h3><p>Thriller · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="New Horizon" data-type="Drama Series" data-symbol="🌅">
-            <div class="poster-symbol">🌅</div><div class="movie-info"><h3>New Horizon</h3><p>Drama · Series</p></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section" id="kids">
-        <div class="section-heading">
-          <h2>Kids Films</h2><a href="#kids">View All →</a>
-        </div>
-        <div class="movie-row kids-row">
-          <article class="movie-card" data-title="Magic World" data-type="Kids Movie" data-symbol="🪄">
-            <div class="poster-symbol">🪄</div><div class="movie-info"><h3>Magic World</h3><p>Kids · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Frozen Dreams" data-type="Kids Movie" data-symbol="❄️">
-            <div class="poster-symbol">❄️</div><div class="movie-info"><h3>Frozen Dreams</h3><p>Kids · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Toy Planet" data-type="Kids Movie" data-symbol="🧸">
-            <div class="poster-symbol">🧸</div><div class="movie-info"><h3>Toy Planet</h3><p>Kids · Movie</p></div>
-          </article>
-          <article class="movie-card" data-title="Funny Friends" data-type="Kids Comedy" data-symbol="🎈">
-            <div class="poster-symbol">🎈</div><div class="movie-info"><h3>Funny Friends</h3><p>Comedy · Kids</p></div>
-          </article>
-          <article class="movie-card" data-title="Jungle Heroes" data-type="Kids Adventure" data-symbol="🦁">
-            <div class="poster-symbol">🦁</div><div class="movie-info"><h3>Jungle Heroes</h3><p>Adventure · Kids</p></div>
-          </article>
-          <article class="movie-card" data-title="Speed Racers" data-type="Kids Movie" data-symbol="🏁">
-            <div class="poster-symbol">🏁</div><div class="movie-info"><h3>Speed Racers</h3><p>Family · Movie</p></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="content-section" id="kdramas">
-        <div class="section-heading">
-          <h2>K-Dramas</h2><a href="#kdramas">View All →</a>
-        </div>
-        <div class="movie-row drama-row">
-          <article class="movie-card" data-title="Love Story" data-type="Romance Series" data-symbol="❤️">
-            <div class="poster-symbol">❤️</div><div class="movie-info"><h3>Love Story</h3><p>Romance · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="Secret Heart" data-type="Romance Series" data-symbol="💜">
-            <div class="poster-symbol">💜</div><div class="movie-info"><h3>Secret Heart</h3><p>Romance · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="New Beginning" data-type="Drama Series" data-symbol="🌸">
-            <div class="poster-symbol">🌸</div><div class="movie-info"><h3>New Beginning</h3><p>Drama · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="My Destiny" data-type="Romance Series" data-symbol="✨">
-            <div class="poster-symbol">✨</div><div class="movie-info"><h3>My Destiny</h3><p>Romance · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="The Promise" data-type="Drama Series" data-symbol="🌹">
-            <div class="poster-symbol">🌹</div><div class="movie-info"><h3>The Promise</h3><p>Drama · Series</p></div>
-          </article>
-          <article class="movie-card" data-title="Blue Memories" data-type="Drama Series" data-symbol="💙">
-            <div class="poster-symbol">💙</div><div class="movie-info"><h3>Blue Memories</h3><p>Drama · Series</p></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="welcome-banner">
-        <div><h2>Welcome to AFAW Entertainment</h2>
-          <p>Your Entertainment World. One premium destination.</p></div>
-        <button class="btn btn-red" id="exploreButton">Explore More →</button>
-      </section>
-
-      <footer>© 2026 AFAW Entertainment · Your Entertainment World</footer>
+      <button class="profile-button" id="profileButton" aria-label="Account">👤</button>
     </div>
+
+  </header>
+
+
+  <main id="home">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-tag">♛ AFAW EXCLUSIVE EXPERIENCE</span>
+
+        <p class="hero-small">YOUR NEXT ENTERTAINMENT DESTINATION</p>
+
+        <h1>YOUR WORLD.<br>
+          <span>YOUR ENTERTAINMENT.</span>
+        </h1>
+
+        <p class="hero-description">
+          Discover an extraordinary world of movies, series,
+          live entertainment and unforgettable stories.
+        </p>
+
+        <div class="hero-meta">
+          <span>4K EXPERIENCE</span>
+          <span>•</span>
+          <span>PREMIUM COLLECTION</span>
+          <span>•</span>
+          <span>ALL IN ONE PLACE</span>
+        </div>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary" id="watchButton">▶ Watch Now</button>
+          <button class="btn btn-secondary" id="infoButton">More Info ⓘ</button>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <span>FEATURED ENTERTAINMENT</span>
+        <div class="hero-dots">
+          <i class="active"></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORY SECTION -->
+    <section class="section categories-section">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">EXPLORE YOUR WORLD</span>
+          <h2>Browse Categories</h2>
+        </div>
+        <span class="section-count">08 COLLECTIONS</span>
+      </div>
+
+      <div class="category-grid">
+
+        <a href="#movies" class="category-card category-movies">
+          <span class="category-icon">🎬</span>
+          <h3>Movies</h3>
+          <p>Explore Films</p>
+        </a>
+
+        <a href="#series" class="category-card category-series">
+          <span class="category-icon">📺</span>
+          <h3>Series</h3>
+          <p>Watch Stories</p>
+        </a>
+
+        <a href="#live" class="category-card category-live">
+          <span class="category-icon">🔴</span>
+          <h3>Live TV</h3>
+          <p>Live Channels</p>
+        </a>
+
+        <a href="#cartoons" class="category-card category-cartoons">
+          <span class="category-icon">🎨</span>
+          <h3>Cartoons</h3>
+          <p>Fun & Adventure</p>
+        </a>
+
+        <a href="#anime" class="category-card category-anime">
+          <span class="category-icon">⚡</span>
+          <h3>Anime</h3>
+          <p>Anime World</p>
+        </a>
+
+        <a href="#kids" class="category-card category-kids">
+          <span class="category-icon">🧸</span>
+          <h3>Kids</h3>
+          <p>Kids Collection</p>
+        </a>
+
+        <a href="#dramas" class="category-card category-drama">
+          <span class="category-icon">🎭</span>
+          <h3>K-Dramas</h3>
+          <p>Drama Collection</p>
+        </a>
+
+        <a href="#punjabi" class="category-card category-punjabi">
+          <span class="category-icon">⭐</span>
+          <h3>Punjabi</h3>
+          <p>Punjabi Entertainment</p>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- TRENDING MOVIES -->
+    <section class="section content-section" id="movies">
+
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">HANDPICKED FOR YOU</span>
+          <h2>Trending Movies</h2>
+        </div>
+        <a href="#movies" class="view-all">View All →</a>
+      </div>
+
+      <div class="movie-row">
+
+        <article class="movie-card" data-title="Featured Movie One" data-type="Movie" data-symbol="🎬">
+          <div class="poster poster-one"><span>01</span></div>
+          <div class="movie-info">
+            <span class="movie-quality">FEATURED</span>
+            <h3>Featured Movie</h3>
+            <p>Movie Collection</p>
+          </div>
+        </article>
+
+        <article class="movie-card" data-title="Featured Movie Two" data-type="Movie" data-symbol="🎥">
+          <div class="poster poster-two"><span>02</span></div>
+          <div class="movie-info">
+            <span class="movie-quality">NEW</span>
+            <h3>New Release</h3>
+            <p>Movie Collection</p>
+          </div>
+        </article>
+
+        <article class="movie-card" data-title="Featured Movie Three" data-type="Movie" data-symbol="🎞️">
+          <div class="poster poster-three"><span>03</span></div>
+          <div class="movie-info">
+            <span class="movie-quality">4K</span>
+            <h3>Action Collection</h3>
+            <p>Movie Collection</p>
+          </div>
+        </article>
+
+        <article class="movie-card" data-title="Featured Movie Four" data-type="Movie" data-symbol="🍿">
+          <div class="poster poster-four"><span>04</span></div>
+          <div class="movie-info">
+            <span class="movie-quality">POPULAR</span>
+            <h3>Popular Movie</h3>
+            <p>Movie Collection</p>
+          </div>
+        </article>
+
+        <article class="movie-card" data-title="Featured Movie Five" data-type="Movie" data-symbol="⭐">
+          <div class="poster poster-five"><span>05</span></div>
+          <div class="movie-info">
+            <span class="movie-quality">TOP PICK</span>
+            <h3>Top Selection</h3>
+            <p>Movie Collection</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- SERIES -->
+    <section class="section content-section" id="series">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">BINGE YOUR FAVORITES</span>
+          <h2>Popular Series</h2>
+        </div>
+        <a href="#series" class="view-all">View All →</a>
+      </div>
+
+      <div class="movie-row">
+        <article class="movie-card" data-title="Series One" data-type="Series" data-symbol="📺">
+          <div class="poster poster-six"><span>01</span></div>
+          <div class="movie-info"><h3>Series Collection</h3><p>Drama & Stories</p></div>
+        </article>
+
+        <article class="movie-card" data-title="Series Two" data-type="Series" data-symbol="🎭">
+          <div class="poster poster-seven"><span>02</span></div>
+          <div class="movie-info"><h3>Featured Series</h3><p>Popular Collection</p></div>
+        </article>
+
+        <article class="movie-card" data-title="Series Three" data-type="Series" data-symbol="✨">
+          <div class="poster poster-eight"><span>03</span></div>
+          <div class="movie-info"><h3>New Series</h3><p>New Collection</p></div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- LIVE TV -->
+    <section class="section live-banner" id="live">
+      <div>
+        <span class="live-indicator">● LIVE EXPERIENCE</span>
+        <h2>Entertainment Never Stops.</h2>
+        <p>Discover live entertainment in one place.</p>
+      </div>
+      <button class="btn btn-primary" id="liveButton">Explore Live TV →</button>
+    </section>
+
+
+    <!-- KIDS -->
+    <section class="section content-section" id="kids">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">FUN FOR EVERYONE</span>
+          <h2>Kids & Cartoons</h2>
+        </div>
+        <a href="#kids" class="view-all">View All →</a>
+      </div>
+
+      <div class="movie-row kids-row">
+        <article class="movie-card" data-title="Kids One" data-type="Kids" data-symbol="🧸">
+          <div class="poster poster-nine"><span>01</span></div>
+          <div class="movie-info"><h3>Kids Collection</h3><p>Family Friendly</p></div>
+        </article>
+        <article class="movie-card" data-title="Cartoon Two" data-type="Cartoons" data-symbol="🎨">
+          <div class="poster poster-ten"><span>02</span></div>
+          <div class="movie-info"><h3>Cartoon World</h3><p>Animation</p></div>
+        </article>
+        <article class="movie-card" data-title="Anime Three" data-type="Anime" data-symbol="⚡">
+          <div class="poster poster-eleven"><span>03</span></div>
+          <div class="movie-info"><h3>Anime Collection</h3><p>Adventure</p></div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- DRAMAS -->
+    <section class="section content-section" id="dramas">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">GLOBAL ENTERTAINMENT</span>
+          <h2>K-Dramas & More</h2>
+        </div>
+        <a href="#dramas" class="view-all">View All →</a>
+      </div>
+
+      <div class="movie-row drama-row">
+        <article class="movie-card" data-title="K Drama One" data-type="K-Drama" data-symbol="🌸">
+          <div class="poster poster-twelve"><span>01</span></div>
+          <div class="movie-info"><h3>K-Drama Collection</h3><p>Romance & Drama</p></div>
+        </article>
+        <article class="movie-card" data-title="Punjabi Two" data-type="Punjabi" data-symbol="⭐">
+          <div class="poster poster-thirteen"><span>02</span></div>
+          <div class="movie-info"><h3>Punjabi Collection</h3><p>Punjabi Entertainment</p></div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- MY LIST -->
+    <section class="section my-list-banner" id="my-list">
+      <div class="my-list-icon">♡</div>
+      <div>
+        <h2>Your Personal Collection</h2>
+        <p>Keep your favorite entertainment together.</p>
+      </div>
+      <button class="btn btn-secondary" id="myListButton">My List →</button>
+    </section>
+
   </main>
 
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-red">A</span><span class="brand-white">-F-A-W</span>
+    </div>
+    <p>Your Entertainment World</p>
+    <p class="footer-copy">© 2026 A-F-A-W Entertainment. All Rights Reserved.</p>
+  </footer>
+
+
+  <!-- MOBILE NAVIGATION -->
   <nav class="mobile-nav">
-    <a href="#home">⌂<small>Home</small></a>
-    <a href="#movies">▣<small>Movies</small></a>
-    <a href="#series">▤<small>Series</small></a>
-    <a href="#home" class="mobile-logo">♛<small>AFAW</small></a>
-    <a href="#kids">☻<small>Kids</small></a>
-    <a href="#settings">⚙<small>Settings</small></a>
+    <a href="#home"><span>⌂</span><small>Home</small></a>
+    <a href="#movies"><span>▣</span><small>Movies</small></a>
+    <a href="#series"><span>▤</span><small>Series</small></a>
+    <a href="#home" class="mobile-brand"><span>♛</span><small>AFAW</small></a>
+    <a href="#live"><span>◉</span><small>Live TV</small></a>
+    <a href="#my-list"><span>♡</span><small>My List</small></a>
   </nav>
 
+
+  <!-- INFORMATION MODAL -->
   <div class="modal" id="movieModal">
     <div class="modal-box">
-      <button class="close-modal" id="closeModal">×</button>
-      <div class="modal-symbol" id="modalSymbol">🎬</div>
-      <h2 id="modalTitle">Movie Details</h2>
-      <p id="modalType">Entertainment</p>
-      <p class="modal-description">This is a preview card. Movie playback will be connected when authorized video content and secure backend access are ready.</p>
-      <button class="btn btn-red" id="modalWatch">▶ Watch Now</button>
+
+      <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+
+      <div class="modal-symbol" id="modalSymbol">♛</div>
+
+      <span class="modal-label">A-F-A-W ENTERTAINMENT</span>
+
+      <h2 id="modalTitle">Welcome</h2>
+
+      <p id="modalType">Your Entertainment World</p>
+
+      <p class="modal-description">
+        Discover your next entertainment experience.
+      </p>
+
+      <button class="btn btn-primary" id="modalWatch">▶ Watch Now</button>
+
     </div>
   </div>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
