@@ -1,269 +1,215 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  // ELEMENTS
-  const searchInput = document.getElementById("searchInput");
-  const movieCards = document.querySelectorAll(".movie-card");
-  const modal = document.getElementById("movieModal");
-
-  const modalSymbol = document.getElementById("modalSymbol");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalType = document.getElementById("modalType");
-
-  const mainNav = document.getElementById("mainNav");
+  const sidebar = document.querySelector(".sidebar");
   const menuToggle = document.getElementById("menuToggle");
 
-  // MODAL SYSTEM
-  function openModal(title, description, symbol = "🎬") {
-    if (!modal) return;
+  const profileOverlay = document.getElementById("profileOverlay");
+  const authOverlay = document.getElementById("authOverlay");
+  const generalOverlay = document.getElementById("generalOverlay");
 
-    modalTitle.textContent = title;
-    modalType.textContent = description;
-    modalSymbol.textContent = symbol;
+  const closeProfile = document.getElementById("closeProfile");
+  const closeAuth = document.getElementById("closeAuth");
+  const closeGeneral = document.getElementById("closeGeneral");
 
-    modal.style.display = "flex";
-    document.body.style.overflow = "hidden";
+  const signInButton = document.getElementById("signInButton");
+  const createAccountButton = document.getElementById("createAccountButton");
+  const settingsLink = document.getElementById("settingsLink");
+
+  const authTitle = document.getElementById("authTitle");
+  const authForm = document.getElementById("authForm");
+  const authMessage = document.getElementById("authMessage");
+
+  const searchInput = document.getElementById("searchInput");
+  const notificationButton = document.getElementById("notificationButton");
+
+  const generalTitle = document.getElementById("generalTitle");
+  const generalMessage = document.getElementById("generalMessage");
+
+  function openOverlay(overlay) {
+    if (overlay) overlay.classList.add("active");
   }
 
-  function closeModal() {
-    if (!modal) return;
-
-    modal.style.display = "none";
-    document.body.style.overflow = "";
+  function closeOverlay(overlay) {
+    if (overlay) overlay.classList.remove("active");
   }
 
-  // MOVIE CARD CLICK
-  movieCards.forEach(card => {
-    card.addEventListener("click", () => {
+  function showMessage(title, message) {
+    if (generalTitle) generalTitle.textContent = title;
+    if (generalMessage) generalMessage.textContent = message;
+    openOverlay(generalOverlay);
+  }
 
-      const title = card.dataset.title || "Entertainment";
-      const type = card.dataset.type || "Collection";
-      const symbol = card.dataset.symbol || "🎬";
+  // Mobile menu
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+    });
+  }
 
-      openModal(
-        title,
-        type + " – More information and authorized playback will be available here.",
-        symbol
-      );
+  // Sidebar navigation
+  document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.querySelectorAll(".sidebar a").forEach(item => {
+        item.classList.remove("active");
+      });
 
+      link.classList.add("active");
+
+      if (sidebar) sidebar.classList.remove("open");
     });
   });
 
-  // SEARCH SYSTEM
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-
-      const query = searchInput.value.toLowerCase().trim();
-
-      movieCards.forEach(card => {
-
-        const title = (card.dataset.title || "").toLowerCase();
-        const type = (card.dataset.type || "").toLowerCase();
-        const text = card.textContent.toLowerCase();
-
-        const match =
-          title.includes(query) ||
-          type.includes(query) ||
-          text.includes(query);
-
-        card.style.display = match ? "" : "none";
-
-      });
-
-    });
-  }
-
-  // WATCH NOW BUTTON
-  const watchButton = document.getElementById("watchButton");
-
-  if (watchButton) {
-    watchButton.addEventListener("click", () => {
-
-      openModal(
-        "Premium Entertainment",
-        "The secure video player will be connected after backend setup and authorized video content integration.",
-        "▶"
-      );
-
-    });
-  }
-
-  // MORE INFO BUTTON
-  const infoButton = document.getElementById("infoButton");
-
-  if (infoButton) {
-    infoButton.addEventListener("click", () => {
-
-      openModal(
-        "A-F-A-W Entertainment",
-        "Your Entertainment World. A premium destination for Movies, Series, Live TV, Anime, Kids and more.",
-        "♛"
-      );
-
-    });
-  }
-
-  // PROFILE BUTTON
+  // Profile panel
   const profileButton = document.getElementById("profileButton");
 
   if (profileButton) {
     profileButton.addEventListener("click", () => {
+      openOverlay(profileOverlay);
+    });
+  }
 
-      openModal(
-        "Your Account",
-        "Login, registration, profile and subscription features will be connected with the secure account system.",
-        "👤"
+  if (closeProfile) {
+    closeProfile.addEventListener("click", () => {
+      closeOverlay(profileOverlay);
+    });
+  }
+
+  // Sign in and create account
+  function openAuth(mode) {
+    closeOverlay(profileOverlay);
+
+    if (authTitle) {
+      authTitle.textContent =
+        mode === "signup" ? "Create Your Account" : "Welcome Back";
+    }
+
+    if (authMessage) authMessage.textContent = "";
+
+    openOverlay(authOverlay);
+  }
+
+  if (signInButton) {
+    signInButton.addEventListener("click", () => openAuth("login"));
+  }
+
+  if (createAccountButton) {
+    createAccountButton.addEventListener("click", () => openAuth("signup"));
+  }
+
+  if (closeAuth) {
+    closeAuth.addEventListener("click", () => {
+      closeOverlay(authOverlay);
+    });
+  }
+
+  // Settings
+  if (settingsLink) {
+    settingsLink.addEventListener("click", () => {
+      closeOverlay(profileOverlay);
+      showMessage(
+        "Settings",
+        "Account settings will be available after secure account integration."
+      );
+    });
+  }
+
+  // Authentication form
+  if (authForm) {
+    authForm.addEventListener("submit", event => {
+      event.preventDefault();
+
+      showMessage(
+        "Account Setup Pending",
+        "Secure sign-in and account creation will be activated after Supabase integration. Your password has not been saved."
       );
 
+      authForm.reset();
+      closeOverlay(authOverlay);
     });
   }
 
-  // LIVE TV BUTTON
-  const liveButton = document.getElementById("liveButton");
+  // Search
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const searchTerm = searchInput.value.trim().toLowerCase();
 
-  if (liveButton) {
-    liveButton.addEventListener("click", () => {
+      document.querySelectorAll(".poster-card").forEach(card => {
+        const cardText = card.textContent.toLowerCase();
+        card.style.display = cardText.includes(searchTerm) ? "" : "none";
+      });
 
-      openModal(
-        "Live TV",
-        "Live channels will appear here after authorized channel integration.",
-        "🔴"
+      document.querySelectorAll(".content-section").forEach(section => {
+        const visibleCards = section.querySelectorAll(
+          ".poster-card:not([style*='display: none'])"
+        );
+
+        if (searchTerm && section.querySelector(".poster-card")) {
+          section.style.display = visibleCards.length ? "" : "none";
+        } else {
+          section.style.display = "";
+        }
+      });
+    });
+  }
+
+  // Notifications
+  if (notificationButton) {
+    notificationButton.addEventListener("click", () => {
+      showMessage(
+        "Notifications",
+        "You are all caught up. New AFAW updates will appear here."
       );
-
     });
   }
 
-  // MY LIST BUTTON
-  const myListButton = document.getElementById("myListButton");
+  // Premium plan buttons
+  document.querySelectorAll(".plan-button").forEach(button => {
+    button.addEventListener("click", () => {
+      const planCard = button.closest(".plan-card");
+      const planName = planCard
+        ? planCard.querySelector("h3")?.textContent || "Premium"
+        : "Premium";
 
-  if (myListButton) {
-    myListButton.addEventListener("click", () => {
-
-      openModal(
-        "My List",
-        "Your personal favorite movies and series collection will be available after account integration.",
-        "♡"
+      showMessage(
+        planName + " Selected",
+        "To activate this membership, please contact the AFAW Owner. Online payment activation is not available yet."
       );
+    });
+  });
 
+  // General modal close
+  if (closeGeneral) {
+    closeGeneral.addEventListener("click", () => {
+      closeOverlay(generalOverlay);
     });
   }
 
-  // MODAL CLOSE BUTTON
-  const closeButton = document.getElementById("closeModal");
-
-  if (closeButton) {
-    closeButton.addEventListener("click", closeModal);
-  }
-
-  // CLOSE MODAL ON BACKGROUND CLICK
-  if (modal) {
-    modal.addEventListener("click", event => {
-      if (event.target === modal) {
-        closeModal();
-      }
-    });
-  }
-
-  // ESCAPE KEY
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape") {
-      closeModal();
+  // Close overlays by clicking outside
+  [profileOverlay, authOverlay, generalOverlay].forEach(overlay => {
+    if (overlay) {
+      overlay.addEventListener("click", event => {
+        if (event.target === overlay) {
+          closeOverlay(overlay);
+        }
+      });
     }
   });
 
-  // MOBILE MENU
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener("click", () => {
+  // Escape key closes open overlays
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeOverlay(profileOverlay);
+      closeOverlay(authOverlay);
+      closeOverlay(generalOverlay);
 
-      const isOpen = mainNav.classList.toggle("open");
+      if (sidebar) sidebar.classList.remove("open");
+    }
+  });
 
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
+  // Current year
+  const yearElement = document.getElementById("currentYear");
 
-      menuToggle.textContent = isOpen ? "✕" : "☰";
-
-    });
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
   }
-
-  // NAVIGATION ACTIVE STATE
-  document.querySelectorAll(".nav-link").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      document.querySelectorAll(".nav-link").forEach(item => {
-        item.classList.remove("active");
-      });
-
-      link.classList.add("active");
-
-      if (mainNav) {
-        mainNav.classList.remove("open");
-      }
-
-      if (menuToggle) {
-        menuToggle.textContent = "☰";
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-
-    });
-
-  });
-
-  // MOBILE NAVIGATION ACTIVE STATE
-  document.querySelectorAll(".mobile-nav a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      document.querySelectorAll(".mobile-nav a").forEach(item => {
-        item.classList.remove("active");
-      });
-
-      link.classList.add("active");
-
-    });
-
-  });
-
-  // CATEGORY NAVIGATION
-  document.querySelectorAll(".category-card").forEach(card => {
-
-    card.addEventListener("click", () => {
-
-      const target = card.getAttribute("href");
-
-      if (target && target.startsWith("#")) {
-
-        const section = document.querySelector(target);
-
-        if (section) {
-          section.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          });
-
-        }
-
-      }
-
-    });
-
-  });
-
-  // HERO DOT INTERACTION
-  document.querySelectorAll(".hero-dots i").forEach((dot, index) => {
-
-    dot.addEventListener("click", () => {
-
-      document.querySelectorAll(".hero-dots i").forEach(item => {
-        item.classList.remove("active");
-      });
-
-      dot.classList.add("active");
-
-      // Visual slider indicator only.
-      // Additional hero slides can be connected later.
-
-    });
-
-  });
 
 });
