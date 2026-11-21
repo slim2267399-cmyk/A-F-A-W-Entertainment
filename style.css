@@ -820,3 +820,40 @@ footer small {
     font-size: 10px;
   }
 }
+/* A-FA-W Premium Category Boxes */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.category-box {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid #76502e;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #242020, #090909);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.category-box:hover {
+  transform: translateY(-5px);
+  border-color: #d7b46a;
+  background: linear-gradient(145deg, #650018, #151010);
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+                      }
+    
