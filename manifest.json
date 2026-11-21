@@ -1,11 +1,11 @@
 
 {
-  "id": "/",
+  "id": "./",
   "name": "AFAW Entertainment",
   "short_name": "AFAW",
   "description": "Your Entertainment World",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#080808",
