@@ -31,6 +31,7 @@ body {
    AFAW LIVE CINEMATIC BACKGROUND
 ===================================== */
 
+
 body {
   background: #050509 !important;
   position: relative;
@@ -124,9 +125,170 @@ main,
 .plan-card,
 .category-card {
   background: rgba(10,10,16,.78) !important;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);g
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255,255,255,.08);
+}
+
+/* =========================================
+   AFAW — PREMIUM CINEMATIC UNIVERSE
+   FULL BACKGROUND REDESIGN
+========================================= */
+
+body {
+  background: #03040a !important;
+  color: #fff;
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+}
+
+/* Deep cinematic atmosphere */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 38%,
+      rgba(0, 105, 255, .22), transparent 38%),
+    radial-gradient(ellipse at 10% 65%,
+      rgba(190, 0, 35, .20), transparent 42%),
+    radial-gradient(ellipse at 90% 55%,
+      rgba(0, 70, 180, .20), transparent 40%),
+    linear-gradient(145deg,
+      #020308 0%, #100611 45%, #02040b 100%);
+  animation: afawAtmosphere 12s ease-in-out infinite alternate;
+}
+
+/* Glowing energy core */
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  width: min(70vw, 650px);
+  aspect-ratio: 1;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle,
+      rgba(210,250,255,.85) 0%,
+      rgba(0,160,255,.42) 5%,
+      rgba(0,90,255,.15) 18%,
+      transparent 52%);
+  box-shadow:
+    0 0 55px rgba(0,140,255,.25),
+    0 0 130px rgba(0,90,255,.15);
+  animation: afawCorePulse 4s ease-in-out infinite;
+}
+
+/* Animated energy rings */
+.afaw-energy-rings {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  width: min(65vw, 520px);
+  aspect-ratio: 1;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(0,160,255,.18);
+  border-radius: 50%;
+  box-shadow:
+    0 0 35px rgba(0,130,255,.12),
+    inset 0 0 35px rgba(0,130,255,.10);
+  animation: afawRingSpin 22s linear infinite;
+}
+
+.afaw-energy-rings::before,
+.afaw-energy-rings::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(210,30,65,.22);
+  border-radius: 50%;
+}
+
+.afaw-energy-rings::after {
+  inset: 25%;
+  border-color: rgba(220,180,90,.20);
+}
+
+/* Floating cinematic light */
+.afaw-cinematic-light {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg,
+      transparent 35%,
+      rgba(0,130,255,.045) 50%,
+      transparent 65%);
+  background-size: 220% 100%;
+  animation: afawLightSweep 12s linear infinite;
+}
+
+/* Keep website content readable */
+main,
+.content-section,
+.app-container {
+  background: transparent !important;
+}
+
+/* Premium glass panels */
+.poster-card,
+.category-card,
+.plan-card {
+  background: rgba(8,10,18,.78) !important;
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.28);
+}
+
+/* Animations */
+@keyframes afawAtmosphere {
+  from { filter: brightness(.78) saturate(1); }
+  to { filter: brightness(1.2) saturate(1.35); }
+}
+
+@keyframes afawCorePulse {
+  0%,100% {
+    opacity: .45;
+    filter: brightness(.8);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes afawRingSpin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+@keyframes afawLightSweep {
+  from { background-position: 100% 0; }
+  to { background-position: -120% 0; }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  body::after {
+    width: 95vw;
+    top: 40%;
+  }
+
+  .afaw-energy-rings {
+    width: 85vw;
+    top: 40%;
+  }
 }
 
 /* Mobile adjustment */
