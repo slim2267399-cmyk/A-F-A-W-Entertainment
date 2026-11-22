@@ -1088,3 +1088,122 @@ footer {
   }
 
 }
+
+
+
+/* =================================
+   AFAW ENTERTAINMENT
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Sidebar */
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 250px;
+        z-index: 9999;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+    }
+
+    #sidebar.active {
+        transform: translateX(0);
+    }
+
+    /* Main content */
+    main {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Navigation */
+    #topNav {
+        display: none;
+    }
+
+    #topNav.active {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #menuToggle {
+        display: flex;
+        cursor: pointer;
+    }
+
+    /* Hero section */
+    .hero {
+        min-height: 430px;
+        padding: 35px 22px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 13px;
+        max-width: 290px;
+    }
+
+    /* Movie sections */
+    #trendingRow,
+    #continueRow,
+    #recommendedRow,
+    #seriesRow {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+    }
+
+    /* Movie cards */
+    .movie-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .movie-poster img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+    }
+
+    .movie-info h3 {
+        font-size: 13px;
+    }
+
+    .movie-info p {
+        font-size: 11px;
+    }
+
+}
+
+/* Smaller phones */
+@media screen and (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    #trendingRow,
+    #continueRow,
+    #recommendedRow,
+    #seriesRow {
+        gap: 8px;
+    }
+
+    .movie-info h3 {
+        font-size: 12px;
+    }
+
+}
